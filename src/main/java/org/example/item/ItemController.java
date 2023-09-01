@@ -45,7 +45,7 @@ public class ItemController {
     @DeleteMapping("/{id}")
     public String deleteItem(@PathVariable long id, @RequestHeader("X-Later-User-Id") long userId) {
         itemService.deleteItem(id, userId);
-        return "Ссылка " + id + " была удалена";
+        return "Link " + id + " has been deleted";
     }
 
     @GetMapping("/check/{id}")
